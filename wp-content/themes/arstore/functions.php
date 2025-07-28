@@ -21,3 +21,16 @@ function mi_tema_elementor_setup() {
     add_theme_support('elementor');
 }
 add_action('after_setup_theme', 'mi_tema_elementor_setup');
+
+// Menu
+function mi_menu_shortcode() {
+    ob_start();
+    wp_nav_menu(array(
+        'theme_location' => 'menu-principal',
+        'container'      => 'nav',
+        'container_class'=> 'menu-principal',
+        'menu_class'     => 'nav-list'
+    ));
+    return ob_get_clean();
+}
+add_shortcode('mi_menu', 'mi_menu_shortcode');
