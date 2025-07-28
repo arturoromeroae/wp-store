@@ -11,3 +11,15 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+#menu-menu-principal {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#menu-menu-principal li a {
+    color: black;
+    font-weight: bold;
+    font-family: 'Poppins', Tahoma, sans-serif;
+}
